@@ -1,7 +1,7 @@
 *{
 	margin: 0px;	/*setting defaults so nothing messes with it later*/
 	padding: 0px;
-	background: #123ABC;
+	background: #84A39C;
 }
 h1{
 	font: bold 20px Tahoma;
@@ -17,10 +17,10 @@ body{
 	text-align: left;
 }
 #topHeaderText{
-	background : #6B6A4B;
+	background : #6C91FF;
 }
 #topHeader{
-	background : #6B6A4B;
+	background : #6C91FF;
 	padding: 20px;
 	text-align: center;
 	color: #2A2D26;
@@ -47,6 +47,9 @@ body{
 	width: 660px;
 	margin: 30px;  /* 720px 280left */
 }
+#mainSection h1{
+	text-align: center;
+}
 #sidebar{
 	float: left;
 	background: #99987A;
@@ -55,17 +58,12 @@ body{
 	padding: 15px;
 	border-radius: 10px;
 }
-aside header{
-	font: bold 14px Tahoma;
-	padding-bottom: 15px;
-}
 #foot{
 	clear:both;
 	text-align: center;
 	padding:  20px;
 	border-top: 2px solid green;
 }
-
 #articleText {
 	background: #99987A;
 	padding: 20px;
