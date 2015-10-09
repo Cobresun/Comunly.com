@@ -1,10 +1,13 @@
 *{
 	margin: 0px;	/*setting defaults so nothing messes with it later*/
 	padding: 0px;
-	background: #84A39C;
+	background: #EBEBEB;
 }
 h1{
-	font: bold 20px Tahoma;
+	font: 40px Arial;
+}
+h2{
+	font: bold 20px Arial;
 }
 header, section, footer, aside, nav, article{          /*for lame browsers*/
 	display:block;
@@ -17,30 +20,39 @@ body{
 	text-align: left;
 }
 #topHeaderText{
-	background : #6C91FF;
+	background : #2196F3;
 }
 #topHeader{
-	background : #6C91FF;
-	padding: 20px;
-	text-align: center;
-	color: #2A2D26;
+	background : #2196F3;
+	padding: 50px;
+	text-align: left;
+	color: #FFFFFF;
 }
 #topMenuText{
-	background: #5C5C42;
+	background: #1976D2;
 	text-decoration: none;
+	color: #D9DADC;
+}
+#selected{
+	background: #1976D2;
+	text-decoration: none;
+	color: #FFFFFF;
+	border-bottom-style: solid;
+	border-color: #FFFFFF;
 }
 #topMenu{
-	background: #5C5C42;
+	background: #1976D2;
 	color: white;
-	text-align: center;
+	text-align: left;
 	text-decoration: none;
+	padding-left: 10px;
 }
 #topMenu li{
 	display:inline-block;
 	list-style:none;
 	padding:15px;
 	font:bold 14px Tahoma;
-	border-radius: 10px 10px 0 0;
+	background: #1976D2;
 }
 #mainSection{
 	float: left;
@@ -48,37 +60,40 @@ body{
 	margin: 30px;  /* 720px 280left */
 }
 #mainSection h1{
-	text-align: center;
+	text-align: left;
 }
 #sidebar{
 	float: left;
-	background: #99987A;
+	background: #FF5722;
 	width: 220px;
 	margin: 30px;
 	padding: 15px;
 	border-radius: 10px;
+
 }
 #foot{
 	clear:both;
 	text-align: center;
 	padding:  20px;
-	border-top: 2px solid green;
+	border-top: 2px solid blue;
 }
 #articleText {
-	background: #99987A;
+	background: #F5F5F5;
 	padding: 20px;
 }
+
 article {
-	background: #99987A;
+	background: #F5F5F5;
 	padding: 20px;
 	margin-bottom: 15px;
-	border-radius: 10px;
+	box-shadow: 2px 2px 10px #888888;
 }
 article footer{
 	text-align: right;
 }
 a{
 	text-decoration: none;
-	color: #D9DADC;
+	color: #FFFFFF;
+	background: #1976D2;
 }
 
