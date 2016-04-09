@@ -1,2 +1,92 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	background: #FFFFFF;
+}
+h1{
+	font: 20px Tahoma;
+}
+h2{
+	font: 15px Tahoma;
+}
+header, section, footer, aside, nav, article{
+	display: block;
+}
+body{
+	text-align: center;
+}
+#bigWrapper{
+	width: 100%;
+	text-align: left;
+}
+.topHeader{
+	background: #FFFFFF;
+	padding: 10px;
+	text-align: left;
+	color: #3F51B5;
+}
+h1.topHeader{
+	padding: 0px;
+}
 
+.topMenu{
+	background: #FFFFFF;
+	color: #C5CAE9;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px;
+	padding-bottom: 2px;
+	align: center;
+	justify-content: space-around;
+}
+#topMenuItems{
+	display:inline-block;
+	list-style:none;
+	font: 20px Tahoma;
+	text-align: center
+	padding: 0px;
+	width:10%;
+	margin: 0 20%;
+}
+#topMenuItems:first-of-type{
+	margin: 0;
+}
+#topMenuItems:last-of-type{
+	margin: 0;
+}
+a.topMenu{
+	text-align: center;
+	padding-bottom: 3px;
+}
+#selected{
+	color: #303F9F;
+	border-bottom-style: solid;
+}
+#selected a{
+	border-bottom-style: none;
+}
 
+.mainSection{
+	float: left;
+	margin: 30px;
+}
+
+.foot{
+	clear:both;
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid blue;
+}
+.articleText {
+	background: #FFFFFF;
+	text-align: left;
+	padding: 20px;
+}
+article {
+	background: #FFFFFF;
+	width: 100%;
+	padding: 10px;
+}
+article footer{
+	text-align: right;
+}
