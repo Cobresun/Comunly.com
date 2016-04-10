@@ -10,7 +10,10 @@
 	</head>
 
 	<body>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 		<script>
+		var uid
 		 function statusChangeCallback(response) {
 		    console.log('statusChangeCallback');
 		    console.log(response);
@@ -20,7 +23,7 @@
 		    // for FB.getLoginStatus().
 		    if (response.status === 'connected') {
 		      // Logged into your app and Facebook.
-		      var uid = response.authResponse.userID;
+		      uid = response.authResponse.userID;
 		      document.getElementById('profilePic').src = "https://graph.facebook.com/" + uid + "/picture?type=small";
 		      testAPI();
 		    } else if (response.status === 'not_authorized') {
@@ -82,8 +85,12 @@
 			function findCoffee() {
 				window.alert(5);
 			}
-			function getTimeyeah(){
+			function getTimeyeah(node){
 				var time = prompt("What time are you going?","Friday at 7:30");
+				var img = document.createElement("img");
+				img.src = "https://graph.facebook.com/" + uid + "/picture?type=small";
+				img.style.float = 'right';
+				$(node.parentNode).append(img);
 			}
 			function upVote(node){
 				var pNode = node.parentNode;
@@ -115,7 +122,7 @@
 		<div id="bigWrapper">
 			<header class="topHeader">
 				<img src="assets/logo.png" class="topHeader" alt="logo">
-				<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();" id="loginButton">
+				<fb:login-button scope="public_profile,email,user_friends, read_custom_friendlists" onlogin="checkLoginState();" id="loginButton">
 				</fb:login-button>
 				<img id="profilePic" src="" alt="You!">
 			</header>
@@ -139,25 +146,7 @@
 				<input type="text" name="search" placeholder="Enter Place, Category" id="searchBar">
 			</form>
 
-      <article>
-
-					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
-					<div id="up">433</div>
-					<div>432</div>
-					<div id="down">431</div>
-					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
-
-					<div id="text">
-					<header>
-						<h1 class="articleText">Higher Ground</h1>
-					</header>
-					<p class="articleText" id="business"> literally the best store ever</p></div>
-
-					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
-					
-				</article>
-
-				<article id="friendslist">
+				<article>
 					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
 					<div id="up">347</div>
 					<div>346</div>
@@ -171,11 +160,11 @@
 					<table id="hi"></table></div>
 
 
-					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
 
 					
 				</article>
-        
+
 				<article>
 
 					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
@@ -190,7 +179,7 @@
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p></div>
 
-					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
 					
 				</article>
 
@@ -208,7 +197,7 @@
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p></div>
 
-					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
 					
 				</article>
 
@@ -227,11 +216,27 @@
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p></div>
 
-					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
 					
 				</article>
 
-				
+				<article>
+
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">433</div>
+					<div>432</div>
+					<div id="down">431</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+
+					<div id="text">
+					<header>
+						<h1 class="articleText">Higher Ground</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
+					
+				</article>
 
 			</section>
 
