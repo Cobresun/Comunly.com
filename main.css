@@ -175,3 +175,8 @@ article footer{
 #text{
 	float: left;
 }
+
+#linkTitle{
+	font: 25px Tahoma;
+	text-decoration: none;
+}
