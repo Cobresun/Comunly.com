@@ -9,6 +9,9 @@ h1{
 h2{
 	font: 20px Tahoma;
 }
+h3{
+	font: 20px Lucida;
+}
 header, section, footer, aside, nav, article{
 	display: block;
 }
