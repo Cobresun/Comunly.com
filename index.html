@@ -20,6 +20,8 @@
 		    // for FB.getLoginStatus().
 		    if (response.status === 'connected') {
 		      // Logged into your app and Facebook.
+		      var uid = response.authResponse.userID;
+		      document.getElementById('profilePic').src = "https://graph.facebook.com/" + uid + "/picture?type=small";
 		      testAPI();
 		    } else if (response.status === 'not_authorized') {
 		      // The person is logged into Facebook, but not your app.
@@ -68,7 +70,6 @@
    			 	FB.api('/me', function(response) {
       				console.log('Successful login for: ' + response.name);
      				document.getElementById('loginButton').style.display = 'none';
-     				document.getElementById('profilePic').src = "https://graph.facebook.com/me/picture?type=small&redirect=false";
      				document.getElementById('profilePic').style.display = 'block';
     			});
  		 }
