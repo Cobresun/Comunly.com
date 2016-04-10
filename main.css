@@ -8,6 +8,7 @@ h1{
 }
 h2{
 	font: 20px Tahoma;
+	display: block;
 }
 h3{
 	font: 20px Verdana;
@@ -120,7 +121,6 @@ article footer{
 }
 
 #pic{
-	float: left;
 	border-radius: 50%;
 	width: 50px;
 	height: 50px;
