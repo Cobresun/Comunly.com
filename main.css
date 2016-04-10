@@ -16,9 +16,14 @@ header, section, footer, aside, nav, article{
 	display: block;
 }
 
+section, footer, aside{
+	background: #B3E5FC;
+}
+
 body{
 	text-align: center;
 }
+
 #bigWrapper{
 	width: 100%;
 	text-align: left;
@@ -42,6 +47,7 @@ h1.topHeader{
 	padding-bottom: 2px;
 	align: center;
 	justify-content: space-around;
+	background: #B3E5FC;
 }
 #topMenuItems{
 	display:inline-block;
@@ -51,6 +57,7 @@ h1.topHeader{
 	padding: 0px;
 	width:10%;
 	margin: 0 20%;
+	background: #B3E5FC;
 }
 #topMenuItems:first-of-type{
 	margin: 0;
