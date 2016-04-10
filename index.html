@@ -68,6 +68,7 @@
    			 	FB.api('/me', function(response) {
       				console.log('Successful login for: ' + response.name);
      				document.getElementById('loginButton').style.display = 'none';
+     				document.getElementById('profilePic').src = "https://graph.facebook.com/me/picture?type=small&amp;redirect=false";
      				document.getElementById('profilePic').style.display = 'block';
     			});
  		 }
@@ -77,7 +78,7 @@
 				<h1 class="topHeader"> Cobresun </h1>
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="loginButton">
 				</fb:login-button>
-				<img id="profilePic" src="https://graph.facebook.com/me/picture?type=small&redirect=false" alt="You!">
+				<img id="profilePic" src="" alt="You!">
 			</header>
 
 			<nav class="topMenu">
