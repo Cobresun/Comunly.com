@@ -81,6 +81,35 @@
 				window.alert(5);
 			}
 
+			function upVote(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[4].style.display = 'none';
+				pNode.childNodes[2].style.display = 'block';
+				pNode.childNodes[6].style.display = 'none';
+				pNode.childNodes[8].src = "assets/downL.png";
+				node.src = "assets/up.png";
+				node.onClick = "reset(this)";
+			}
+
+			function downVote(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[4].style.display = 'none';
+				pNode.childNodes[6].style.display = 'block';
+				pNode.childNodes[2].style.display = 'none';
+				pNode.childNodes[0].src = "assets/upL.png";
+				node.src="assets/down.png";
+				node.onClick = "reset(this)";
+			}
+
+			function reset(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[2].style.display = 'none';
+				pNode.childNodes[4].style.display = 'block';
+				pNode.childNodes[6].style.display = 'none';
+				pNode.childNodes[0].src = "assets/up.png";
+				pNode.childNodes[8].src = "assets/down.png";
+			}
+
 		</script>
 		<div id="bigWrapper">
 			<header class="topHeader">
@@ -110,9 +139,11 @@
 			</form>
 
 				<article>
-					<div id="buttons"><img src="assets/up.png" id="arrows">
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">347</div>
 					<div>346</div>
-					<img src="assets/down.png" id="arrows"></div>
+					<div id="down">345</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 					<header>
 						<h1 class="articleText">Simple Simon Pies</h1>
 					</header>
@@ -124,9 +155,11 @@
 
 				<article>
 
-					<div id="buttons"><img src="assets/up.png" id="arrows">
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">347</div>
 					<div>346</div>
-					<img src="assets/down.png" id="arrows"></div>
+					<div id="down">345</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
 					<header>
 						<h1 class="articleText">Inglewood Aquatic Centre</h1>
@@ -137,9 +170,11 @@
 
 				<article>
 
-					<div id="buttons"><img src="assets/up.png" id="arrows">
-					<div>305</div>
-					<img src="assets/down.png" id="arrows"></div>
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">306</div>
+					<div>304</div>
+					<div id="down">303</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
 
 					<header>
@@ -152,9 +187,11 @@
 				<article>
 
 
-					<div id="buttons"><img src="assets/up.png" id="arrows">
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">275</div>
 					<div>274</div>
-					<img src="assets/down.png" id="arrows"></div>
+					<div id="down">273</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
 
 					<header>
@@ -166,9 +203,11 @@
 
 				<article>
 
-					<div id="buttons"><img src="assets/up.png" id="arrows">
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">433</div>
 					<div>432</div>
-					<img src="assets/down.png" id="arrows"></div>
+					<div id="down">431</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
 
 					<header>
