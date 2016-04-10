@@ -26,6 +26,9 @@
 		      uid = response.authResponse.userID;
 		      document.getElementById('profilePic').src = "https://graph.facebook.com/" + uid + "/picture?type=small";
 		      testAPI();
+
+		      document.getElementById('picM').style.display = 'block';
+
 		    } else if (response.status === 'not_authorized') {
 		      // The person is logged into Facebook, but not your app.
 		      document.getElementById('status').innerHTML = 'Please log ' +
@@ -144,7 +147,7 @@
 
 			<section class="business">
 
-			<form name="form" onsubmit="findCoffee()" id="searchBar">
+			<form name="form" onsubmit="findCoffee()" class="topMenu">
 				<input type="text" name="search" placeholder="Enter Place, Category" id="searchBar">
 			</form>
 			
@@ -163,6 +166,8 @@
 					<p class="articleText" id="business"> literally the best store ever</p></div>
 
 					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
+
+					<img src="assets/trump.png" id="picM">
 					
 				</article>
 				<article>
@@ -180,6 +185,10 @@
 
 
 					<img src="assets/going.png" id="going" onclick="getTimeyeah(this)">
+
+					<img src="assets/cole.png" id="picM">
+					<img src="assets/a.png" id="picM">
+					<img src="assets/bernie.png" id="picM">
 
 					
 				</article>
