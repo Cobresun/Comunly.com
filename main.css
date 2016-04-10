@@ -1,7 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	background: #ccffff;
+	background: #03A9F4;
 }
 h1{
 	font: 25px Tahoma;
@@ -13,8 +13,12 @@ header, section, footer, aside, nav, article{
 	display: block;
 }
 
-header{
+header, article{
 	background: #FFFFFF;
+}
+
+nav{
+	background: #03A9F4;
 }
 
 body{
@@ -116,6 +120,7 @@ article footer{
     width: 70%;
     height 30px;
     border-radius: 5px;
+    background: #FFFFFF;
 }
 
 #arrows{
