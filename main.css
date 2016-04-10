@@ -13,7 +13,7 @@ header, section, footer, aside, nav, article{
 	display: block;
 }
 
-section{
+section, footer{
 	background: #ccffff;
 }
 
@@ -116,6 +116,7 @@ article footer{
     width: 70%;
     padding: 5px;
     border-radius: 5px;
+    background: #ccffff;
 }
 
 #arrows{
