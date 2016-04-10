@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Cobresun</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		<script>
+		 function statusChangeCallback(response) {
+		    console.log('statusChangeCallback');
+		    console.log(response);
+		    // The response object is returned with a status field that lets the
+		    // app know the current login status of the person.
+		    // Full docs on the response object can be found in the documentation
+		    // for FB.getLoginStatus().
+		    if (response.status === 'connected') {
+		      // Logged into your app and Facebook.
+		      var uid = response.authResponse.userID;
+		      document.getElementById('profilePic').src = "https://graph.facebook.com/" + uid + "/picture?type=small";
+		      testAPI();
+		    } else if (response.status === 'not_authorized') {
+		      // The person is logged into Facebook, but not your app.
+		      document.getElementById('status').innerHTML = 'Please log ' +
+		        'into this app.';
+		    } else {
+		      // The person is not logged into Facebook, so we're not sure if
+		      // they are logged into this app or not.
+		      document.getElementById('status').innerHTML = 'Please log ' +
+		        'into Facebook.';
+		    }
+		  }
+		  // This function is called when someone finishes with the Login
+		  // Button.  See the onlogin handler attached to it in the sample
+		  // code below.
+		  function checkLoginState() {
+		    FB.getLoginStatus(function(response) {
+		      statusChangeCallback(response);
+		    });
+		  }
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '248150128873371',
+		      cookie	 : true,
+		      xfbml      : true,
+		      version    : 'v2.5'
+		    });
+		   FB.getLoginStatus(function(response) {
+    			statusChangeCallback(response);
+  			});
+  			};
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		    function testAPI() {
+    			console.log('Welcome!  Fetching your information.... ');
+   			 	FB.api('/me', function(response) {
+      				console.log('Successful login for: ' + response.name);
+     				document.getElementById('loginButton').style.display = 'none';
+     				document.getElementById('profilePic').style.display = 'block';
+     				getUserFriends();
+    			});
+ 		 }
+ 		 function getUserFriends() {
+ 		 	FB.api('me/taggable_friends', function (response) {
+ 		 		console.log('Got friends: ', response.data);
+ 		 		$("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>')
+ 		 	})
+ 		 }
+		</script>
+
+		<script type="text/javascript">
+			
+			function findCoffee() {
+				window.alert(5);
+			}
+			function getTimeyeah(){
+				var time = prompt("What time are you going?","Friday at 7:30");
+			}
+			function upVote(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[4].style.display = 'none';
+				pNode.childNodes[2].style.display = 'block';
+				pNode.childNodes[6].style.display = 'none';
+				pNode.childNodes[8].src = "assets/downL.png";
+				node.src = "assets/up.png";
+				node.onClick = "reset(this)";
+			}
+			function downVote(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[4].style.display = 'none';
+				pNode.childNodes[6].style.display = 'block';
+				pNode.childNodes[2].style.display = 'none';
+				pNode.childNodes[0].src = "assets/upL.png";
+				node.src="assets/down.png";
+				node.onClick = "reset(this)";
+			}
+			function reset(node){
+				var pNode = node.parentNode;
+				pNode.childNodes[2].style.display = 'none';
+				pNode.childNodes[4].style.display = 'block';
+				pNode.childNodes[6].style.display = 'none';
+				pNode.childNodes[0].src = "assets/up.png";
+				pNode.childNodes[8].src = "assets/down.png";
+			}
+		</script>
+		<div id="bigWrapper">
+			<header class="topHeader">
+				<img src="assets/logo.png" class="topHeader" alt="logo">
+				<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();" id="loginButton">
+				</fb:login-button>
+				<img id="profilePic" src="" alt="You!">
+			</header>
+
+			<nav class="topMenu">
+				<ul class="topMenu">
+
+					<li id="topMenuItems" class="topMenu"><a class="topMenu" href="index.html">Hot</a></li>
+
+					<li id="topMenuItems" class="topMenu"><a class="topMenu" href="top.html" id="selected">Top</a></li>
+
+					<li id="topMenuItems" class="topMenu"><a class="topMenu" href=friends.html>Friends</a></li>
+
+				</ul>
+
+			</nav>
+
+			<section class="business">
+
+			<form name="form" onsubmit="findCoffee()" id="searchBar">
+				<input type="text" name="search" placeholder="Enter Place, Category" id="searchBar">
+			</form>
+
+      <article>
+
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">433</div>
+					<div>432</div>
+					<div id="down">431</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+
+					<div id="text">
+					<header>
+						<h1 class="articleText">Higher Ground</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					
+				</article>
+
+				<article id="friendslist">
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">347</div>
+					<div>346</div>
+					<div id="down">345</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+					<div id="text">
+					<header>
+						<h1 class="articleText">Simple Simon Pies</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p>
+					<table id="hi"></table></div>
+
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+
+					
+				</article>
+        
+				<article>
+
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">347</div>
+					<div>346</div>
+					<div id="down">345</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+
+					<div id="text">
+					<header>
+						<h1 class="articleText">Inglewood Aquatic Centre</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					
+				</article>
+
+				<article>
+
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">306</div>
+					<div>304</div>
+					<div id="down">303</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+
+					<div id="text">
+					<header>
+						<h1 class="articleText">North Capitol Hill Park (Canmore Park)</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					
+				</article>
+
+				<article>
+
+
+					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
+					<div id="up">275</div>
+					<div>274</div>
+					<div id="down">273</div>
+					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+
+					<div id="text">
+					<header>
+						<h1 class="articleText">Calgary Olympic Development Association</h1>
+					</header>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
+					
+				</article>
+
+				
+
+			</section>
+
+
+			<footer>
+				Cobresun 2016
+			</footer>
+		</div>
+	</body>
+</html>
