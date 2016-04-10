@@ -10,7 +10,8 @@ h2{
 	font: 20px Tahoma;
 }
 h3{
-	font: 20px Lucida;
+	font: 20px Verdana;
+	float: left;
 }
 header, section, footer, aside, nav, article{
 	display: block;
