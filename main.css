@@ -1,7 +1,7 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	background: #03A9F4;
+	background: #FFFFFF;
 }
 h1{
 	font: 25px Tahoma;
@@ -11,14 +11,6 @@ h2{
 }
 header, section, footer, aside, nav, article{
 	display: block;
-}
-
-header, article{
-	background: #FFFFFF;
-}
-
-nav{
-	background: #03A9F4;
 }
 
 body{
@@ -135,7 +127,6 @@ article footer{
 
 #buttons {
 	float: left;
-	background: #FFFFFF;
 }
 
 #up{
