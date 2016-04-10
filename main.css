@@ -90,3 +90,7 @@ article {
 article footer{
 	text-align: right;
 }
+
+#loginButton{
+	float: right;
+}
