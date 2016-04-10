@@ -92,22 +92,8 @@
 			}
 
 			function getTimeyeah(){
-				FB.getLoginStatus(function(response, 1) {
-					checkTime(response);
-				})
-				
+				var time = prompt("What time are you going?","Friday at 7:30");
 			}
-
-			function checkTime(response, task){
-
-				if (response.status === 'connected') {
-			      var time = prompt("What time are you going?","Friday at 7:30");
-			    } else if (response.status === 'not_authorized') {
-			      window.alert("Please login");
-			    } else {
-			      window.alert("Please login");
-			    }
-		  	}
 
 			function upVote(node){
 				var pNode = node.parentNode;
