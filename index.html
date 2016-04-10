@@ -97,9 +97,11 @@
 
 			function getTimeyeah(node){
 				var time = prompt("What time are you going?","Friday at 7:30");
-				node.src = "https://graph.facebook.com/" + uid + "/picture?type=small";
-				node.style.float = 'right';
-				node.id = "profilePic";
+				var img = document.createElement("img");
+				img.src = "https://graph.facebook.com/" + uid + "/picture?type=small";
+				img.style.float = 'right';
+				img.id = "profilePic";
+				$(node.parentNode).append(img);
 			}
 
 			function upVote(node){
