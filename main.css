@@ -39,7 +39,7 @@ h1.topHeader{
 }
 
 .topMenu{
-	background: #B3E5FC;
+	background: #03A9F4;
 	color: #C5CAE9;
 	text-align: center;
 	text-decoration: none;
@@ -56,7 +56,7 @@ h1.topHeader{
 	padding: 0px;
 	width:10%;
 	margin: 0 20%;
-	background: #B3E5FC;
+	background: #03A9F4;
 }
 #topMenuItems:first-of-type{
 	margin: 0;
