@@ -81,6 +81,10 @@
 				window.alert(5);
 			}
 
+			function getTimeyeah(){
+				var time = prompt("What time are you going?","7:30");
+			}
+
 			function upVote(node){
 				var pNode = node.parentNode;
 				pNode.childNodes[4].style.display = 'none';
@@ -113,7 +117,7 @@
 		</script>
 		<div id="bigWrapper">
 			<header class="topHeader">
-				<h1 class="topHeader"> Cobresun </h1>
+				<img src="logo.png" class="topHeader">
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="loginButton">
 				</fb:login-button>
 				<img id="profilePic" src="" alt="You!">
@@ -144,11 +148,14 @@
 					<div>346</div>
 					<div id="down">345</div>
 					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
+					<div id="text">
 					<header>
 						<h1 class="articleText">Simple Simon Pies</h1>
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p>
-					<table id="hi"></table>
+					<table id="hi"></table></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 
 					
 				</article>
@@ -161,10 +168,13 @@
 					<div id="down">345</div>
 					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
+					<div id="text">
 					<header>
 						<h1 class="articleText">Inglewood Aquatic Centre</h1>
 					</header>
-					<p class="articleText" id="business"> literally the best store ever</p>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 					
 				</article>
 
@@ -176,11 +186,13 @@
 					<div id="down">303</div>
 					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
-
+					<div id="text">
 					<header>
 						<h1 class="articleText">North Capitol Hill Park (Canmore Park)</h1>
 					</header>
-					<p class="articleText" id="business"> literally the best store ever</p>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 					
 				</article>
 
@@ -193,11 +205,13 @@
 					<div id="down">273</div>
 					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
-
+					<div id="text">
 					<header>
 						<h1 class="articleText">Calgary Olympic Development Association</h1>
 					</header>
-					<p class="articleText" id="business"> literally the best store ever</p>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 					
 				</article>
 
@@ -209,11 +223,13 @@
 					<div id="down">431</div>
 					<img src="assets/down.png" id="arrows" onclick="downVote(this)"></div>
 
-
+					<div id="text">
 					<header>
 						<h1 class="articleText">Higher Ground</h1>
 					</header>
-					<p class="articleText" id="business"> literally the best store ever</p>
+					<p class="articleText" id="business"> literally the best store ever</p></div>
+
+					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 					
 				</article>
 

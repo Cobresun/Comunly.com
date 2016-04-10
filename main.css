@@ -87,7 +87,7 @@ a.topMenu{
 article {
 	background: #FFFFFF;
 	width: 96.25%;
-	height:100px;
+	height:120px;
 	padding: 10px;
 	display: block;
 	box-shadow: 2px 2px 10px #888888;
@@ -115,10 +115,11 @@ article footer{
 
 #arrows{
 	margin: 0px;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	text-align: left;
 	display: block;
+	cursor: pointer;
 }
 
 #buttons {
@@ -131,4 +132,15 @@ article footer{
 
 #down{
 	display: none;
+}
+
+#going{
+	float : right;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+
+#text{
+	float: left;
 }
