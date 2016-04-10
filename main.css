@@ -118,6 +118,11 @@ article footer{
 	float: right;
 	border-radius: 50%;
 }
+
+#pic{
+	float: left;
+	border-radius: 50%;
+}
 #searchBar{
     margin-left: 15%;
     margin-right: 15%;
