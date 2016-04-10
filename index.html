@@ -68,7 +68,7 @@
    			 	FB.api('/me', function(response) {
       				console.log('Successful login for: ' + response.name);
      				document.getElementById('loginButton').style.display = 'none';
-     				document.getElementById('profilePic').src = "https://graph.facebook.com/me/picture?type=small&amp;redirect=false";
+     				document.getElementById('profilePic').src = "https://graph.facebook.com/me/picture?type=small&redirect=false";
      				document.getElementById('profilePic').style.display = 'block';
     			});
  		 }
