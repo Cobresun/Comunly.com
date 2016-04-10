@@ -71,7 +71,17 @@
       				console.log('Successful login for: ' + response.name);
      				document.getElementById('loginButton').style.display = 'none';
      				document.getElementById('profilePic').style.display = 'block';
+     				getUserFriends();
     			});
+ 		 }
+
+ 		 function getUserFriends() {
+ 		 	FB.api('me/taggable_friends', function (response) {
+ 		 		console.log('Got friends: ', response.data);
+
+ 		 		$("#friendslist").html('<img src="'+response.data[0].picture.data.url+'"/>')
+
+ 		 	})
  		 }
 		</script>
 
@@ -82,7 +92,7 @@
 			}
 
 			function getTimeyeah(){
-				var time = prompt("What time are you going?","7:30");
+				var time = prompt("What time are you going?","Friday at 7:30");
 			}
 
 			function upVote(node){
@@ -117,8 +127,8 @@
 		</script>
 		<div id="bigWrapper">
 			<header class="topHeader">
-				<img src="logo.png" class="topHeader">
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" id="loginButton">
+				<img src="assets/logo.png" class="topHeader" alt="logo">
+				<fb:login-button scope="public_profile,email,user_friends,read_friendlists" onlogin="checkLoginState();" id="loginButton">
 				</fb:login-button>
 				<img id="profilePic" src="" alt="You!">
 			</header>
@@ -142,7 +152,7 @@
 				<input type="text" name="search" placeholder="Enter Place, Category" id="searchBar">
 			</form>
 
-				<article>
+				<article id="friendslist">
 					<div id="buttons"><img src="assets/up.png" id="arrows" onclick="upVote(this)">
 					<div id="up">347</div>
 					<div>346</div>
@@ -154,6 +164,7 @@
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p>
 					<table id="hi"></table></div>
+
 
 					<img src="assets/going.png" id="going" onclick="getTimeyeah()">
 
