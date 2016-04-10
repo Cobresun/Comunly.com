@@ -79,13 +79,19 @@ a.topMenu{
 }
 .articleText {
 	background: #FFFFFF;
+	padding: 5px;
+	display: block;
 	text-align: left;
-	padding: 20px;
+	margin-left: 40px;
 }
 article {
 	background: #FFFFFF;
-	width: 100%;
+	width: 96.25%;
+	height:100px;
 	padding: 10px;
+	display: block;
+	box-shadow: 2px 2px 10px #888888;
+	margin : 10px;
 }
 article footer{
 	text-align: right;
@@ -97,4 +103,24 @@ article footer{
 #profilePic{
 	display:none;
 	float: right;
+	border-radius: 50%;
+}
+#searchBar{
+    margin-left: 25%;
+    margin-right:25%;
+    width: 50%;
+
+    border-radius: 5px;
+}
+
+#arrows{
+	margin: 0px;
+	width: 30px;
+	height: 30px;
+	text-align: left;
+	display: block;
+}
+
+#buttons {
+	float: left;
 }
