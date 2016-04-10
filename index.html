@@ -13,8 +13,7 @@
 		<script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
-		      appId      : 'Cobresun',
-		      status	 : true,
+		      appId      : '1701285206794560',
 		      xfbml      : true,
 		      version    : 'v2.5'
 		    });
@@ -27,15 +26,6 @@
 		     js.src = "//connect.facebook.net/en_US/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-		  
-			FB.getLoginStatus(function(response) {
-			  if (response.status === 'connected') {
-			    console.log('Logged in.');
-			  }
-			  else {
-			    FB.login();
-			  }
-			});
 		</script>
 		<div id="bigWrapper">
 			<header class="topHeader">
@@ -72,7 +62,12 @@
 						<h1 class="articleText">Inglewood Aquatic Centre</h1>
 					</header>
 					<p class="articleText" id="business"> literally the best store ever</p>
-					
+					<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 				</article>
 
 				<article>
