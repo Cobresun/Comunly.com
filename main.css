@@ -94,3 +94,7 @@ article footer{
 #loginButton{
 	float: right;
 }
+#profilePic{
+	display:none;
+	float: right;
+}
