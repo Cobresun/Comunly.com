@@ -17,7 +17,7 @@ header, section, footer, aside, nav, article{
 }
 
 section, footer, aside{
-	background: #B3E5FC;
+	background: #03A9F4;
 }
 
 body{
@@ -122,7 +122,7 @@ article footer{
     height 30px;
     padding-top: 5px;
     border-radius: 5px;
-    background: #FFFFFF;
+    border: 0;
 }
 
 #arrows{
