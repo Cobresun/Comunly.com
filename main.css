@@ -4,7 +4,7 @@
 	background: #FFFFFF;
 }
 h1{
-	font: 30px Tahoma;
+	font: 25px Tahoma;
 }
 h2{
 	font: 20px Tahoma;
@@ -42,7 +42,7 @@ h1.topHeader{
 #topMenuItems{
 	display:inline-block;
 	list-style:none;
-	font: 40px Tahoma;
+	font: 35px Tahoma;
 	text-align: center
 	padding: 0px;
 	width:10%;
@@ -109,7 +109,7 @@ article footer{
     margin-left: 25%;
     margin-right:25%;
     width: 50%;
-
+    padding: 5px;
     border-radius: 5px;
 }
 
